@@ -2,6 +2,7 @@
 
 # 🚀 Jinks.pro Website Workflow Script
 # This script helps you manage your preview branch workflow
+# Updated for new directory structure: /site for website, /docs for documentation
 
 set -e  # Exit on any error
 
@@ -56,6 +57,8 @@ start_work() {
     git pull origin main
     
     print_success "Ready to work! You're now on the preview branch with latest changes."
+    print_status "Website files are in the /site directory"
+    print_status "Documentation is in the /docs directory"
 }
 
 # Function to save and test changes
@@ -64,7 +67,7 @@ save_changes() {
     
     if [ -z "$message" ]; then
         print_error "Please provide a commit message!"
-        echo "Usage: ./workflow.sh save 'Your commit message'"
+        echo "Usage: ./docs/workflow.sh save 'Your commit message'"
         exit 1
     fi
     
@@ -123,13 +126,19 @@ show_status() {
     echo ""
     print_status "Recent commits:"
     git log --oneline -5
+    
+    echo ""
+    print_status "Directory Structure:"
+    echo "  /site     - Website files (index.html, styles.css, script.js)"
+    echo "  /docs     - Documentation and workflow files"
+    echo "  /         - Root with simple README"
 }
 
 # Function to show help
 show_help() {
     echo "🚀 Jinks.pro Website Workflow Script"
     echo ""
-    echo "Usage: ./workflow.sh [command] [options]"
+    echo "Usage: ./docs/workflow.sh [command] [options]"
     echo ""
     echo "Commands:"
     echo "  start                    Switch to preview branch and pull latest from main"
@@ -139,16 +148,21 @@ show_help() {
     echo "  help                     Show this help message"
     echo ""
     echo "Examples:"
-    echo "  ./workflow.sh start"
-    echo "  ./workflow.sh save 'Add new contact form'"
-    echo "  ./workflow.sh deploy"
+    echo "  ./docs/workflow.sh start"
+    echo "  ./docs/workflow.sh save 'Add new contact form'"
+    echo "  ./docs/workflow.sh deploy"
+    echo ""
+    echo "Directory Structure:"
+    echo "  /site     - Website files (HTML, CSS, JS)"
+    echo "  /docs     - Documentation and workflow"
+    echo "  /         - Root directory"
     echo ""
     echo "Workflow:"
-    echo "  1. ./workflow.sh start          # Start working"
-    echo "  2. Make your changes            # Edit files"
-    echo "  3. ./workflow.sh save 'msg'     # Save and test"
-    echo "  4. Test on GitHub Pages         # Preview your changes"
-    echo "  5. ./workflow.sh deploy         # Deploy to main when ready"
+    echo "  1. ./docs/workflow.sh start          # Start working"
+    echo "  2. Make your changes                 # Edit files in /site directory"
+    echo "  3. ./docs/workflow.sh save 'msg'     # Save and test"
+    echo "  4. Test on GitHub Pages              # Preview your changes"
+    echo "  5. ./docs/workflow.sh deploy         # Deploy to main when ready"
 }
 
 # Main script logic

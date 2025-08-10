@@ -2,6 +2,22 @@
 
 This document explains how to use the preview branch to test your website changes before merging them to main.
 
+## 📁 Directory Structure
+
+```
+jinks.pro/
+├── README.md          # Simple root README
+├── .gitignore         # Git ignore rules
+├── site/              # Website files
+│   ├── index.html     # Main HTML file
+│   ├── styles.css     # CSS styles
+│   └── script.js      # JavaScript functionality
+└── docs/              # Documentation and workflow
+    ├── README.md      # Detailed project documentation
+    ├── WORKFLOW.md    # This file
+    └── workflow.sh    # Helper script
+```
+
 ## 📋 Current Setup
 
 - **`main` branch**: Contains your production website
@@ -23,9 +39,9 @@ git pull origin main
 
 ### 2. Making Changes
 
-Make your changes to the website files:
-- Edit `index.html`, `styles.css`, `script.js`
-- Test locally by opening `index.html` in your browser
+Make your changes to the website files in the `/site` directory:
+- Edit `/site/index.html`, `/site/styles.css`, `/site/script.js`
+- Test locally by opening `/site/index.html` in your browser
 - Make sure everything looks good
 
 ### 3. Testing Your Changes
@@ -48,10 +64,12 @@ You can set up GitHub Pages for the preview branch:
 1. Go to your repository on GitHub
 2. Navigate to **Settings** → **Pages**
 3. Under **Source**, select **Deploy from a branch**
-4. Choose **preview** branch and **/ (root)** folder
+4. Choose **preview** branch and **/site** folder (important!)
 5. Click **Save**
 
 Your preview will be available at: `https://yourusername.github.io/jinks.pro`
+
+**Note**: Since your website files are now in `/site`, make sure to set the source folder to `/site` in GitHub Pages settings.
 
 ### 5. When Ready to Deploy
 
@@ -83,7 +101,7 @@ For larger features, you might want to create specific feature branches:
 git checkout preview
 git checkout -b feature/new-section
 
-# Make your changes
+# Make your changes in /site directory
 # ... edit files ...
 
 # Commit and push
@@ -107,6 +125,7 @@ git push origin --delete feature/new-section
 2. **Always test locally** before pushing to preview
 3. **Use descriptive commit messages** - they help track changes
 4. **Keep preview branch up to date** with main
+5. **Website files go in `/site`** - documentation goes in `/docs`
 
 ## 🔧 Quick Commands Reference
 
@@ -131,13 +150,18 @@ git checkout -- filename
 
 # Discard all changes
 git reset --hard HEAD
+
+# Run workflow script (from root directory)
+./docs/workflow.sh start
+./docs/workflow.sh save "Your message"
+./docs/workflow.sh deploy
 ```
 
 ## 📱 Testing Checklist
 
 Before merging to main, ensure:
 
-- [ ] Website loads properly
+- [ ] Website loads properly from `/site/index.html`
 - [ ] All links work
 - [ ] Responsive design works on mobile
 - [ ] No console errors
@@ -182,6 +206,12 @@ git reset --hard main
 git push origin preview --force
 ```
 
+### GitHub Pages not working:
+
+- Make sure the source folder is set to `/site` in GitHub Pages settings
+- Check that your website files are in the `/site` directory
+- Verify the branch is set to `preview` or `main` as desired
+
 ## 🎉 Benefits of This Workflow
 
 1. **Safe testing** - Changes don't affect production until ready
@@ -189,6 +219,14 @@ git push origin preview --force
 3. **Collaboration** - Others can review your changes
 4. **Professional** - Follows industry best practices
 5. **Confidence** - Know your changes work before deploying
+6. **Organized** - Clear separation between website and documentation
+
+## 📚 Documentation Location
+
+- **Project README**: `/README.md` (simple description)
+- **Detailed Docs**: `/docs/README.md` (comprehensive project info)
+- **Workflow Guide**: `/docs/WORKFLOW.md` (this file)
+- **Helper Script**: `/docs/workflow.sh` (automated workflow commands)
 
 ---
 
