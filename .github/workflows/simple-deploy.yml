@@ -1,0 +1,58 @@
+name: Simple Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  pr-comment:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - name: Comment PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const isMainBranch = '${{ github.base_ref }}' === 'main' || '${{ github.base_ref }}' === 'master';
+            const message = isMainBranch 
+              ? `🚀 **Changes deployed to GitHub Pages!**\n\n🔗 **Live URL:** https://${{ github.repository_owner }}.github.io/${{ github.repository }}/\n\nThis deployment will be updated with each new commit to this PR.`
+              : `📝 **PR created successfully!**\n\nChanges will be deployed to GitHub Pages when this PR is merged to the main branch.`;
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: message
+            });

@@ -2,8 +2,8 @@
 
 [Documentation](/docs)
 
-## 🚀 GitHub Pages with PR Previews
+## 🚀 GitHub Pages Deployment
 
-This repository is configured with automatic GitHub Pages deployment and pull request previews. Each PR gets its own preview URL for instant feedback and testing.
+This repository is configured with automatic GitHub Pages deployment using GitHub Actions. Changes are automatically deployed when merged to the main branch.
 
 **Learn more:** [GitHub Pages Setup](/docs/GITHUB_PAGES.md)

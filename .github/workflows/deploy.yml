@@ -50,13 +50,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
       - name: Deploy Preview
-        uses: peaceiris/actions-gh-pages@v3
+        uses: actions/deploy-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
-          destination_dir: preview-${{ github.event.number }}
-          force_orphan: true
+          path: .
+          preview: true
 
       - name: Comment PR
         uses: actions/github-script@v7
