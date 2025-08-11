@@ -2,6 +2,8 @@
 
 This repository is configured with automatic pull request previews that create live previews of your website for every PR to the main branch.
 
+**Note**: This feature may require additional GitHub Actions workflow configuration. Currently, the repository uses a simplified deployment workflow.
+
 ## ✨ How It Works
 
 ### **Automatic Preview Generation**
@@ -18,11 +20,12 @@ This repository is configured with automatic pull request previews that create l
 ## 🔧 Workflow Files
 
 ### **PR Preview Workflow** (`.github/workflows/pr-preview.yml`)
+- **Status**: May need to be configured
 - **Triggers**: PR events (opened, updated, reopened)
 - **Target**: Only PRs to main/master branches
 - **Actions**: Creates preview deployment + comments on PR
 
-### **Main Deployment Workflow** (`.github/workflows/deploy.yml`)
+### **Main Deployment Workflow** (`.github/workflows/simple-deploy.yml`)
 - **Triggers**: Direct pushes to main/master
 - **Actions**: Deploys to production GitHub Pages
 - **Concurrency**: Separate from PR previews

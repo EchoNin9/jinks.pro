@@ -47,9 +47,15 @@ The workflow automatically:
 
 ## File Structure
 ```
-.github/
-└── workflows/
-    └── simple-deploy.yml    # Main deployment workflow
+jinks.pro/
+├── index.html              # Main website file
+├── styles.css              # CSS styles
+├── script.js               # JavaScript
+├── assets/                 # Images and icons
+├── .github/
+│   └── workflows/
+│       └── simple-deploy.yml    # Main deployment workflow
+└── docs/                   # Documentation
 ```
 
 ## Why Simplified?

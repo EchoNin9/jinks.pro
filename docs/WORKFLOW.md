@@ -6,16 +6,18 @@ This document explains how to use the preview branch to test your website change
 
 ```
 jinks.pro/
-├── README.md          # Simple root README
-├── .gitignore         # Git ignore rules
-├── site/              # Website files
-│   ├── index.html     # Main HTML file
-│   ├── styles.css     # CSS styles
-│   └── script.js      # JavaScript functionality
-└── docs/              # Documentation and workflow
-    ├── README.md      # Detailed project documentation
-    ├── WORKFLOW.md    # This file
-    └── workflow.sh    # Helper script
+├── index.html         # Main HTML file with updated content
+├── styles.css         # CSS styles and responsive design
+├── script.js          # JavaScript functionality
+├── assets/            # Images and icons
+│   ├── adam-avatar1.png  # Profile avatar image
+│   ├── github.svg        # GitHub icon
+│   └── linkedin.svg      # LinkedIn icon
+├── docs/              # Documentation and workflow
+│   ├── README.md      # Detailed project documentation
+│   ├── WORKFLOW.md    # This file
+│   └── workflow.sh    # Helper script
+└── CNAME              # Custom domain configuration
 ```
 
 ## 📋 Current Setup
@@ -39,9 +41,9 @@ git pull origin main
 
 ### 2. Making Changes
 
-Make your changes to the website files in the `/site` directory:
-- Edit `/site/index.html`, `/site/styles.css`, `/site/script.js`
-- Test locally by opening `/site/index.html` in your browser
+Make your changes to the website files in the root directory:
+- Edit `index.html`, `styles.css`, `script.js`
+- Test locally by opening `index.html` in your browser
 - Make sure everything looks good
 
 ### 3. Testing Your Changes
@@ -64,12 +66,12 @@ You can set up GitHub Pages for the preview branch:
 1. Go to your repository on GitHub
 2. Navigate to **Settings** → **Pages**
 3. Under **Source**, select **Deploy from a branch**
-4. Choose **preview** branch and **/site** folder (important!)
+4. Choose **preview** branch and **/** (root folder)
 5. Click **Save**
 
 Your preview will be available at: `https://yourusername.github.io/jinks.pro`
 
-**Note**: Since your website files are now in `/site`, make sure to set the source folder to `/site` in GitHub Pages settings.
+**Note**: Since your website files are now in the root directory, make sure to set the source folder to **/** (root) in GitHub Pages settings.
 
 ### 5. When Ready to Deploy
 
