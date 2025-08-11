@@ -2,7 +2,7 @@
 
 # 🚀 Jinks.pro Website Workflow Script
 # This script helps you manage your preview branch workflow
-# Updated for new directory structure: /site for website, /docs for documentation
+# Updated for new directory structure: root for website, /docs for documentation
 
 set -e  # Exit on any error
 
@@ -57,7 +57,7 @@ start_work() {
     git pull origin main
     
     print_success "Ready to work! You're now on the preview branch with latest changes."
-    print_status "Website files are in the /site directory"
+    print_status "Website files are in the root directory"
     print_status "Documentation is in the /docs directory"
 }
 
