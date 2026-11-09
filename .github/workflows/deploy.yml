@@ -1,8 +1,12 @@
-name: Deploy to GitHub Pages
+name: Deploy Production & Mobile Preview
 
 on:
   push:
-    branches: [ main, master ]
+    branches:
+      - main
+      - master
+      - preview
+      - 'claude/**'
 
 permissions:
   contents: read
@@ -11,7 +15,7 @@ permissions:
 
 concurrency:
   group: "pages-deploy"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   deploy:
@@ -20,8 +24,28 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout
+      - name: Checkout repository with all branches
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Assemble composite site (main at /, preview at /preview/)
+        run: |
+          mkdir -p _site _site/preview
+
+          # 1. Production root (/) ALWAYS comes from origin/main so preview/mobile pushes never overwrite prod
+          git archive origin/main | tar -x -C _site
+          rm -rf _site/.claude _site/.github
+
+          # 2. Live mobile staging (/preview/) comes from the pushed preview/claude branch (or origin/preview)
+          if [ "${GITHUB_REF_NAME}" != "main" ] && [ "${GITHUB_REF_NAME}" != "master" ]; then
+            git archive HEAD | tar -x -C _site/preview
+          elif git rev-parse --verify origin/preview >/dev/null 2>&1; then
+            git archive origin/preview | tar -x -C _site/preview
+          else
+            git archive origin/main | tar -x -C _site/preview
+          fi
+          rm -rf _site/preview/.claude _site/preview/.github _site/preview/CNAME
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -29,7 +53,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
 
       - name: Deploy to GitHub Pages
         id: deployment
