@@ -726,6 +726,12 @@
   color: var(--color-muted);
 }
 
+.contact-sub {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  margin-block-start: var(--space-3xs);
+}
+
 .contact-link {
   display: inline-flex;
   align-items: center;
