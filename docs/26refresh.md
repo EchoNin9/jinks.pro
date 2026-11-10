@@ -146,4 +146,4 @@ After Hallmark's `sloplint` passes, run a targeted pass with the newly installed
 
 - [x] Commit the refreshed site to the `preview` branch and push (`git push origin preview` -> auto-deploys to `https://jinks.pro/preview/`).
 - [x] Verify the live preview build and check all external links (`adamjinks.com/blog/*`, `github.com/adamjinks`, `github.com/EchoNin9/*`, `linkedin.com/in/adamjinks`, `mailto:adam@jinks.pro`).
-- [ ] Promote `preview` to `main` (`./docs/workflow.sh deploy` or merge `preview` into `main`) and verify `https://jinks.pro`.
+- [x] Promote `preview` to `main` (`./docs/workflow.sh deploy` or merge `preview` into `main`) and verify `https://jinks.pro`.
