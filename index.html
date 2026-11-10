@@ -1,180 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adam Jinks - Developer & Designer</title>
-    <meta name="description" content="Personal website of Adam Jinks - Developer, Designer, and Creative Professional">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adam Jinks: Enterprise Cloud Architecture and Systems</title>
+  <meta name="description" content="Adam Jinks: Cloud architecture and systems that stay up. 20+ years leading enterprise cloud transformation and building production serverless software.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Radio+Canada+Big:wght@400;700&family=Radio+Canada:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
-        <nav class="nav">
-            <div class="nav-brand">
-                <a href="#home">AJ</a>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#connect">Connect</a></li>
-            </ul>
-            <div class="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-    </header>
+  <a href="#main-content" class="skip-link visually-hidden">Skip to main content</a>
+  <header class="header">
+    <nav class="nav container" aria-label="Primary navigation">
+      <div class="nav-brand">
+        <a href="#home" class="wordmark"><span class="wordmark-name">Adam</span><span class="wordmark-role">Jinks</span></a>
+      </div>
+      <ul id="primary-nav-menu" class="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#connect">Connect</a></li>
+      </ul>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav-menu" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
 
-    <main>
-        <section id="home" class="hero" aria-label="Home">
-            <div class="container">
-                <div class="hero-content">
-                    <h1 class="hero-title">
-                        Hi, I'm <span class="highlight">Adam Jinks</span>
-                    </h1>
-                    <p class="hero-subtitle">
-                        Cloud & Technology Leader — Enterprise Transformation · Digital Architecture · DevOps (and beyond)
-                    </p>
-                    <p class="hero-description">
-                        <span class="highlight">I help organizations modernize infrastructure, foster innovation, and scale operations securely and efficiently.</span>
-                    </p>
-                    <div class="hero-actions">
-                        <a href="#projects" class="btn btn-primary">View My Work</a>
-                        <a href="#connect" class="btn btn-secondary">Get In Touch</a>
-                    </div>
-                </div>
-                <div class="hero-visual">
-                    <div class="hero-image">
-                        <div class="avatar-placeholder">
-                            <img src="assets/adam-avatar1.png" alt="Adam Jinks" class="avatar-image">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="about" aria-label="About Me">
-            <div class="container">
-                <h2 class="section-title">About Me</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>
-                            I’m a strategic technology leader with 20+ years aligning cloud strategy with business outcomes
-                            and leading cross‑functional teams through enterprise transformation. My background spans AWS,
-                            hybrid/multi‑cloud architecture, DevOps enablement, and security governance in fast‑moving,
-                            regulated environments.
-                        </p>
-                        <p>
-                            I mentor emerging leaders, set clear technical direction, and build consensus with executives so teams
-                            can deliver scalable, secure systems — faster.
-                        </p>
-                    </div>
-                    <div class="skills">
-                        <h3>Core Expertise</h3>
-                        <ul class="expertise-list">
-                            <li>Cloud Governance & Security (AWS Organizations, RBAC, Guardrails, Compliance)</li>
-                            <li>Enterprise Architecture & Migration Strategy</li>
-                            <li>DevOps Transformation & Automation (CI/CD, IaC: Terraform, CloudFormation)</li>
-                            <li>Network Architecture & Service Mesh (EKS, containers, modern app platforms)</li>
-                            <li>Cost Optimization, Reliability Engineering, and Operational Excellence</li>
-                        </ul>
-                        
-                        <h3>Skills & Technologies</h3>
-                        <p class="skills-text">
-                            <span class="highlight">AWS · Kubernetes/EKS · Terraform · CloudFormation · Python · Bash · Jenkins · GitHub Actions ·
-                            AWS CodePipeline/CodeBuild · IAM · SCP/Permission Boundaries · VPC/Transit Gateway · Splunk ·
-                            Docker · Helm · Postgres · Linux · Windows</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="projects" aria-label="Featured Projects">
-            <div class="container">
-                <h2 class="section-title">Featured Projects</h2>
-                <div class="projects-grid">
-                    <article class="project-card">
-                        <div class="project-content">
-                            <h3>Security & Cloud Governance — National Telecom</h3>
-                            <p>
-                                Directed an enterprise AWS security and governance redesign: standardized RBAC, SCPs, and permission
-                                boundaries; aligned controls to corporate compliance. Result: materially fewer security incidents and
-                                faster, safer delivery across hundreds of accounts.
-                            </p>
-                            <div class="project-links">
-                                <a href="#connect" class="project-link">Ask for a deeper dive</a>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <article class="project-card">
-                        <div class="project-content">
-                            <h3>Organization Migration — Freedom Mobile Cutover</h3>
-                            <p>
-                                Led the multi‑org AWS migration and networking/security cutover under a tight window. Coordinated routing,
-                                TGW, VPN, and service dependencies. Achieved seamless transition with zero unplanned outages.
-                            </p>
-                            <div class="project-links">
-                                <a href="#connect" class="project-link">Request the runbook outline</a>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <article class="project-card">
-                        <div class="project-content">
-                            <h3>DevOps Enablement & Delivery Acceleration</h3>
-                            <p>
-                                Mentored platform and product teams on IaC, CI/CD, and release workflows (Terraform, Sceptre, CloudFormation,
-                                Jenkins/CodePipeline). Improved deployment speed and reduced incident MTTR through better automation and
-                                incident response playbooks.
-                            </p>
-                            <div class="project-links">
-                                <a href="#contact" class="project-link">See example playbooks</a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="connect" class="contact" aria-label="Get In Touch">
-            <div class="container">
-                <h2 class="section-title">Get In Touch</h2>
-                <div class="contact-content">
-                    <p class="contact-intro">
-                        Interested in technology leadership, cloud strategy, or modernizing platforms? I'm happy to collaborate,
-                        advise, or just talk shop.
-                    </p>
-                    <ul class="contact-methods">
-                        <li><strong>Email:</strong> <span class="email-text">adam@jinks.pro</span></li>
-                        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/adamjinks" rel="me"><img src="assets/linkedin.svg" alt="LinkedIn" class="contact-icon"> linkedin.com/in/adamjinks</a></li>
-                        <li><strong>GitHub:</strong> <a href="https://github.com/adamjinks" rel="me"><img src="assets/github.svg" alt="GitHub" class="contact-icon"> github.com/adamjinks</a></li>
-                        <li><strong>View This Repo:</strong> <a href="https://github.com/echonin9/jinks.pro" rel="noopener"><img src="assets/github.svg" alt="Repository" class="contact-icon"> github.com/echonin9/jinks.pro</a></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Echo Nin9 & Adam Jinks. Built with ❤️ and lots of ☕</p>
+  <main id="main-content" tabindex="-1">
+    <section id="home" class="hero" aria-label="Home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1 class="hero-title">Cloud architecture and systems that stay up.</h1>
+          <p class="lead hero-lead">Hi, I’m Adam Jinks: enterprise cloud leader and serverless systems builder.</p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">Inspect production systems</a>
+            <a href="#connect" class="btn btn-secondary">Discuss architecture</a>
+          </div>
+          <p class="hero-scope">Executive cloud advisory, zero-downtime cutovers, and serverless engineering for high-reliability environments.</p>
         </div>
-    </footer>
-
-    <script src="script.js"></script>
-    
-    <!-- SEO/ATS Keywords Section -->
-    <section aria-hidden="true" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">
-        Cloud Strategy, Technology Leadership, Enterprise Architecture, DevOps Leadership, Digital Transformation,
-        AWS Organizations, Security Governance, Infrastructure as Code, CI/CD Strategy, Stakeholder Management,
-        Kubernetes, Terraform, CloudFormation, Incident Response, Cost Optimization, Organizational Change Management.
+        <div class="hero-panel field">
+          <div class="hero-portrait" data-slot>
+            <img src="assets/adam-avatar1.png" alt="Adam Jinks" width="320" height="320" fetchpriority="high">
+          </div>
+          <div class="hero-figure-block">
+            <span class="num figure-hero">20+</span>
+            <span class="figure-caption">Years leading enterprise cloud architecture, security governance, and platforms.</span>
+          </div>
+          <div class="hero-credentials">
+            <div class="cred-item">
+              <span class="num cred-val">100+</span>
+              <span class="cred-label">AWS accounts governed under unified RBAC and SCPs</span>
+            </div>
+            <div class="cred-item">
+              <span class="num cred-val">0</span>
+              <span class="cred-label">Unplanned outages during national telecom cutovers</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <section id="about" class="about" aria-label="About">
+      <div class="container">
+        <div class="about-header">
+          <h2>Enterprise leadership and hands-on systems engineering</h2>
+        </div>
+        <div class="about-content">
+          <div class="about-story">
+            <p class="lead">For over two decades, I have directed cloud transformations across national telecom, financial technology, and regulated multi-account environments. My focus is simple: eliminate blast radiuses, accelerate developer delivery, and build systems that stay up.</p>
+            <p>By day, I advise leadership teams on AWS Organizations governance, Service Control Policies, permission boundaries, and zero-downtime infrastructure migrations. By night, I ship production serverless software, autonomous AI operations runtimes, and single-table DynamoDB platforms.</p>
+          </div>
+          <div class="practice-grid">
+            <div class="practice-col">
+              <h3 class="practice-title">Governance and security</h3>
+              <ul class="practice-list">
+                <li>AWS Organizations multi-account structure, SCPs, and permission boundaries</li>
+                <li>Standardized role-based access control (RBAC) and compliance audit readiness</li>
+                <li>Network transit architecture, AWS Transit Gateway, Direct Connect, and VPN routing</li>
+                <li>Incident post-mortems, reliability engineering, and blast-radius minimization</li>
+              </ul>
+            </div>
+            <div class="practice-col">
+              <h3 class="practice-title">Platform and delivery</h3>
+              <ul class="practice-list">
+                <li>Infrastructure as code: OpenTofu, Terraform, AWS CloudFormation, and Sceptre</li>
+                <li>Continuous integration and delivery: GitHub Actions, AWS CodePipeline, and Jenkins</li>
+                <li>Container platforms: Amazon EKS, Docker runtime environments, and microservices</li>
+                <li>Developer enablement, release velocity acceleration, and MTTR reduction</li>
+              </ul>
+            </div>
+            <div class="practice-col">
+              <h3 class="practice-title">Production serverless and AI ops</h3>
+              <ul class="practice-list">
+                <li>Single-table DynamoDB data modeling, Python AWS Lambda, and EventBridge</li>
+                <li>Zero-inbound hybrid IoT Core command planes with X.509 mutual TLS</li>
+                <li>Autonomous AI agent operations, verify-before-assertion search grounding, and DR</li>
+                <li>Static edge publishing on Cloudflare Workers and AWS CloudFront with pure CSS tokens</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects" aria-label="Featured projects">
+      <div class="container">
+        <div class="projects-header">
+          <h2>Selected production systems and enterprise cutovers</h2>
+          <p class="lead">A dual record of large-scale enterprise leadership and open production engineering.</p>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-content">
+              <h3 class="project-title">Security and cloud governance across national telecom</h3>
+              <p class="project-desc">Directed an enterprise AWS security and governance overhaul: standardized RBAC, SCPs, and permission boundaries aligned with regulatory compliance across hundreds of accounts. Resulted in materially fewer security incidents and safer delivery.</p>
+              <div class="project-links">
+                <a href="#connect" class="project-link">Request governance review</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-content">
+              <h3 class="project-title">Multi-organization AWS cutover for Freedom Mobile</h3>
+              <p class="project-desc">Led the multi-organization AWS migration and networking cutover under a tight schedule. Coordinated Transit Gateway routing, VPN tunnels, and service dependencies with zero unplanned outages.</p>
+              <div class="project-links">
+                <a href="#connect" class="project-link">Request cutover runbook outline</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-content">
+              <h3 class="project-title">Platform enablement and delivery acceleration</h3>
+              <p class="project-desc">Mentored platform and product teams on infrastructure as code (OpenTofu, Terraform, Sceptre, CloudFormation) and CI/CD automation. Accelerated deployment cadence and reduced incident MTTR through automated playbooks.</p>
+              <div class="project-links">
+                <a href="#contact" class="project-link">Discuss playbook architecture</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-content">
+              <h3 class="project-title">HomeCloud: Zero-inbound hybrid IoT control plane</h3>
+              <p class="project-desc">Bi-directional Home Assistant and Synology Docker control plane on AWS IoT Core over outbound MQTT and TLS with X.509 device certificates, double command allowlisting, and zero open firewall ports, operating for under three dollars a month.</p>
+              <div class="project-links">
+                <a href="https://adamjinks.com/blog/homecloud" class="project-link" rel="noopener">Read architecture writeup</a>
+                <a href="https://github.com/EchoNin9/homecloud" class="project-link" rel="noopener">EchoNin9/homecloud</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-content">
+              <h3 class="project-title">Funked Up Shift: 22-app serverless workspace</h3>
+              <p class="project-desc">Multi-app serverless platform built on single-table DynamoDB, Python HTTP API Gateway dispatchers, and isolated Lambda microservices, backed by an 896-test pytest suite enforcing route parity against Terraform in CI.</p>
+              <div class="project-links">
+                <a href="https://adamjinks.com/blog/funkedupshift" class="project-link" rel="noopener">Read single-table writeup</a>
+                <a href="https://funkedupshift.com" class="project-link" rel="noopener">Visit funkedupshift.com</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-content">
+              <h3 class="project-title">9host: Multi-tenant cloud SaaS hosting platform</h3>
+              <p class="project-desc">Multi-tenant edge hosting architecture for developer services with strict tenant partition isolation in DynamoDB, tier-based feature gating, dynamic CloudFront routing, and OpenTofu infrastructure.</p>
+              <div class="project-links">
+                <a href="https://github.com/EchoNin9/9host" class="project-link" rel="noopener">EchoNin9/9host</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-content">
+              <h3 class="project-title">GeminiClaw: Autonomous agent operations and DR</h3>
+              <p class="project-desc">Production runtime and disaster-recovery harness for autonomous AI agents. Features automated search grounding to eliminate hallucination, multi-network messaging orchestration, and Age-encrypted state recovery runbooks.</p>
+              <div class="project-links">
+                <a href="https://github.com/adamjinks/geminiclaw-home" class="project-link" rel="noopener">View geminiclaw-home</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-content">
+              <h3 class="project-title">System 26: High-craft static edge architectures</h3>
+              <p class="project-desc">Static web platforms on Cloudflare Workers and AWS CloudFront with zero layout shift, pure CSS token systems, subsetted typography, and automated DNS and infrastructure pipelines.</p>
+              <div class="project-links">
+                <a href="https://adamjinks.com/blog/system-26-overhaul" class="project-link" rel="noopener">Read System 26 writeup</a>
+                <a href="https://adamjinks.com/blog/echo9-developer-services" class="project-link" rel="noopener">Developer services note</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="writing" aria-label="Technical writing">
+      <div class="container">
+        <div class="writing-header">
+          <h2>Architecture notes and technical writing</h2>
+          <p class="lead">Selected engineering writeups on distributed architectures, serverless systems, and edge infrastructure.</p>
+        </div>
+        <div class="writing-ledger">
+          <article class="writing-row">
+            <div class="writing-info">
+              <h3 class="writing-title">Bi-directional Home Assistant control on AWS without a VPN</h3>
+              <p class="writing-desc">Connecting on-premise Docker infrastructure to AWS IoT Core over persistent outbound MQTT with X.509 device certificates.</p>
+            </div>
+            <a href="https://adamjinks.com/blog/homecloud" class="writing-link">Read IoT Core note</a>
+          </article>
+          <article class="writing-row">
+            <div class="writing-info">
+              <h3 class="writing-title">How a serverless site catalog turned into a 22-app personal operating system</h3>
+              <p class="writing-desc">Designing single-table DynamoDB partitions and continuous integration route parity testing across 22 serverless applications.</p>
+            </div>
+            <a href="https://adamjinks.com/blog/funkedupshift" class="writing-link">Read DynamoDB note</a>
+          </article>
+          <article class="writing-row">
+            <div class="writing-info">
+              <h3 class="writing-title">What developer services actually means</h3>
+              <p class="writing-desc">Architecting tenant isolation, edge routing, and automated infrastructure deployments on modern cloud primitives.</p>
+            </div>
+            <a href="https://adamjinks.com/blog/echo9-developer-services" class="writing-link">Read SaaS note</a>
+          </article>
+          <article class="writing-row">
+            <div class="writing-info">
+              <h3 class="writing-title">Trading dark-mode cards for a teal pixel desktop</h3>
+              <p class="writing-desc">Building sub-second static sites with tokenized pure CSS, zero runtime layout shift, and Cloudflare Worker routing.</p>
+            </div>
+            <a href="https://adamjinks.com/blog/system-26-overhaul" class="writing-link">Read System 26 note</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="connect" class="contact" aria-label="Connect">
+      <div class="container">
+        <div class="contact-header">
+          <h2>Connect and collaborate</h2>
+          <p class="lead">Interested in enterprise cloud leadership, zero-downtime cutovers, or discussing serverless systems? Reach out directly.</p>
+        </div>
+        <div id="contact" class="contact-card">
+          <ul class="contact-methods">
+            <li class="contact-item">
+              <span class="contact-type">Email</span>
+              <a href="mailto:adam@jinks.pro" class="contact-link">adam@jinks.pro</a>
+            </li>
+            <li class="contact-item">
+              <span class="contact-type">LinkedIn</span>
+              <a href="https://www.linkedin.com/in/adamjinks" class="contact-link" rel="me"><img src="assets/linkedin.svg" alt="" width="20" height="20" class="contact-icon" aria-hidden="true"><span>linkedin.com/in/adamjinks</span></a>
+            </li>
+            <li class="contact-item">
+              <span class="contact-type">GitHub</span>
+              <a href="https://github.com/adamjinks" class="contact-link" rel="me"><img src="assets/github.svg" alt="" width="20" height="20" class="contact-icon" aria-hidden="true"><span>github.com/adamjinks</span></a>
+            </li>
+            <li class="contact-item">
+              <span class="contact-type">Source code</span>
+              <a href="https://github.com/echonin9/jinks.pro" class="contact-link" rel="noopener"><img src="assets/github.svg" alt="" width="20" height="20" class="contact-icon" aria-hidden="true"><span>github.com/echonin9/jinks.pro</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="wordmark"><span class="wordmark-name">Adam</span><span class="wordmark-role">Jinks</span></a>
+        <p class="footer-summary">Enterprise cloud architecture and production serverless systems.</p>
+      </div>
+      <div class="footer-nav">
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#connect">Connect</a></li>
+        </ul>
+      </div>
+      <div class="footer-meta">
+        <p class="footer-copy">© 2026 Echo Nin9 and Adam Jinks.</p>
+        <p class="footer-preview">Staging preview: <a href="https://jinks.pro/preview/" class="footer-preview-link">jinks.pro/preview</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

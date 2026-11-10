@@ -51,8 +51,8 @@ Everything you need to run and review this overhaul from your phone is now commi
 > Per [`docs/WORKFLOW.md`](./WORKFLOW.md), **never commit website edits directly to `main`**. All development happens on `preview` (or a `claude/*` branch merged into `preview`) before promoting to `main`.
 
 - [x] Checkout and sync the `preview` branch (`git checkout preview && git merge main`).
-- [ ] Audit existing assets in `assets/` (`adam-avatar1.png`, `github.svg`, `linkedin.svg`) and determine if any real product screenshots should be captured via Hallmark's `scripts/capture.mjs` from live properties (`funkedupshift.com`, `adamjinks.com`, `echo9.net`).
-- [ ] Remove the off-screen hidden SEO/ATS keyword-stuffing block in `index.html` (lines 174–178) and fold those domain terms naturally into visible semantic copy (architecture competencies, project ledger, and technical stack).
+- [x] Audit existing assets in `assets/` (`adam-avatar1.png`, `github.svg`, `linkedin.svg`) and determine if any real product screenshots should be captured via Hallmark's `scripts/capture.mjs` from live properties (`funkedupshift.com`, `adamjinks.com`, `echo9.net`).
+- [x] Remove the off-screen hidden SEO/ATS keyword-stuffing block in `index.html` (lines 174–178) and fold those domain terms naturally into visible semantic copy (architecture competencies, project ledger, and technical stack).
 
 ---
 
@@ -71,29 +71,29 @@ Everything you need to run and review this overhaul from your phone is now commi
 Split the work showcase into two clear, complementary lenses (or a unified architectural index/ledger):
 
 #### A. Enterprise Leadership & Transformation (Proven Track Record)
-- [ ] **Enterprise Cloud Governance & Security (National Telecom)** — Directed an AWS multi-account security and governance overhaul: standardized RBAC, SCPs, and permission boundaries aligned with strict regulatory compliance across hundreds of accounts.
-- [ ] **Multi-Org AWS Cutover (Freedom Mobile Migration)** — Led the multi-organization AWS migration and networking/security cutover (Transit Gateway, VPN, routing, service dependencies) under a tight cutover window with zero unplanned outages.
-- [ ] **Platform & DevOps Enablement** — Mentored platform and product teams on IaC (`Terraform`, `OpenTofu`, `Sceptre`, `CloudFormation`) and CI/CD pipelines (`GitHub Actions`, `CodePipeline`, `Jenkins`), accelerating release velocity and cutting incident MTTR.
+- [x] **Enterprise Cloud Governance & Security (National Telecom)** — Directed an AWS multi-account security and governance overhaul: standardized RBAC, SCPs, and permission boundaries aligned with strict regulatory compliance across hundreds of accounts.
+- [x] **Multi-Org AWS Cutover (Freedom Mobile Migration)** — Led the multi-organization AWS migration and networking/security cutover (Transit Gateway, VPN, routing, service dependencies) under a tight cutover window with zero unplanned outages.
+- [x] **Platform & DevOps Enablement** — Mentored platform and product teams on IaC (`Terraform`, `OpenTofu`, `Sceptre`, `CloudFormation`) and CI/CD pipelines (`GitHub Actions`, `CodePipeline`, `Jenkins`), accelerating release velocity and cutting incident MTTR.
 
 #### B. Production Systems & Open Engineering (`EchoNin9` & `adamjinks`)
 *Framed around architectural rigor, security posture, and operational economics—showing that Adam still builds and ships hands-on systems:*
 
-- [ ] **HomeCloud (`EchoNin9/homecloud`) — Zero-Inbound-Port Hybrid Cloud IoT Control Plane**
+- [x] **HomeCloud (`EchoNin9/homecloud`) — Zero-Inbound-Port Hybrid Cloud IoT Control Plane**
   - *Business/Architectural Angle:* Connects on-prem Docker infrastructure (Synology NAS, Home Assistant, Mosquitto) to AWS IoT Core over persistent outbound-only MQTT/TLS with X.509 device certs, double-allowlisted command validation, replay protection, and a DynamoDB state mirror—running for ~$1–3/month on AWS with zero open firewall ports and no VPN latency.
   - *Deep-Dive Link:* `adamjinks.com/blog/homecloud` + `github.com/EchoNin9/homecloud`
-- [ ] **Funked Up Shift (`EchoNin9/funkedupshift` / `funkedupshift.com`) — 22-App Serverless Workspace**
+- [x] **Funked Up Shift (`EchoNin9/funkedupshift` / `funkedupshift.com`) — 22-App Serverless Workspace**
   - *Business/Architectural Angle:* Multi-module serverless platform built on a single-table DynamoDB core, Python HTTP API Gateway dispatchers, and isolated Lambda microservices—backed by an 896-test `pytest` suite that parses Terraform `.tf` files in CI to guarantee 100% route parity before deploy.
   - *Deep-Dive Link:* `adamjinks.com/blog/funkedupshift`
-- [ ] **9host (`EchoNin9/9host`) — Multi-Tenant Cloud SaaS Hosting Platform**
+- [x] **9host (`EchoNin9/9host`) — Multi-Tenant Cloud SaaS Hosting Platform**
   - *Business/Architectural Angle:* Multi-tenant edge hosting architecture (`*.echo9.net`) featuring strict `TENANT#` DynamoDB partition isolation, tier-based feature gating, dynamic CloudFront routing, React 19 admin control plane, and OpenTofu IaC.
-- [ ] **GeminiClaw & OpenClaw (`adamjinks/geminiclaw-home`, `adamjinks/openclaw-home`) — Autonomous Agent Operations & DR**
+- [x] **GeminiClaw & OpenClaw (`adamjinks/geminiclaw-home`, `adamjinks/openclaw-home`) — Autonomous Agent Operations & DR**
   - *Business/Architectural Angle:* Production runtime and disaster-recovery harness for autonomous AI agents. Features automated `verify-before-assertion` search grounding to eliminate hallucination, multi-network unified messaging orchestration, and Age-encrypted on-change state backups with idempotent machine restore runbooks.
-- [ ] **System 26 & Edge Publishing (`adamjinks/adamjinks.com`, `EchoNin9/bigcookie.music`) — High-Craft Static Edge Systems**
+- [x] **System 26 & Edge Publishing (`adamjinks/adamjinks.com`, `EchoNin9/bigcookie.music`) — High-Craft Static Edge Systems**
   - *Business/Architectural Angle:* Zero-CLS, dependency-light web platforms on Cloudflare Workers and AWS CloudFront/S3, pairing bespoke CSS token systems and automated DNS/IaC pipelines with sub-second edge delivery.
   - *Deep-Dive Link:* `adamjinks.com/blog/system-26-overhaul` & `adamjinks.com/blog/echo9-developer-services`
 
 ### 2.3 Selected Technical Writing Cross-Links (`adamjinks.com/blog`)
-- [ ] Add a clean, scannable **"Architecture Notes & Writing"** section (or integrate direct deep-dive links into each project row) linking to the business-relevant engineering posts on `adamjinks.com`:
+- [x] Add a clean, scannable **"Architecture Notes & Writing"** section (or integrate direct deep-dive links into each project row) linking to the business-relevant engineering posts on `adamjinks.com`:
   - *"HomeCloud: Bi-Directional Home Assistant Control on AWS Without a VPN"* (`/blog/homecloud`)
   - *"Funked Up Shift: How a Serverless Site Catalog Turned into a 22-App Personal Operating System"* (`/blog/funkedupshift`)
   - *"echo9.net: What Developer Services Actually Means"* (`/blog/echo9-developer-services`)
@@ -105,22 +105,22 @@ Split the work showcase into two clear, complementary lenses (or a unified archi
 
 > Execute Hallmark's 7-step redesign workflow (`~/.agents/skills/hallmark/SKILL.md` + `references/redesign.md`).
 
-- [ ] **Step 0 — Pre-flight (`.hallmark/preflight.json`):**
+- [x] **Step 0 — Pre-flight (`.hallmark/preflight.json`):**
   - Run Hallmark pre-flight on `index.html`, `styles.css`, and `script.js`.
   - Document preserved wiring (anchor navigation, real contact links, `CNAME`, static no-bundler deployment) and what is retired (the `#667eea → #764ba2` purple-to-blue gradient, yellow `#fbbf24` highlights, runtime `<style>` injection in `script.js`).
-- [ ] **Step 1 & 2 — Shape & Material Inventory:**
+- [x] **Step 1 & 2 — Shape & Material Inventory:**
   - Genre: `editorial` or `modern-minimal` (executive technology leader + hands-on systems architect).
   - Job: `hire` / `book` (drive executive advisory, architecture consulting via `echo9.net`, and direct leadership inquiries to `adam@jinks.pro` / LinkedIn).
   - Run `node ~/.agents/skills/hallmark/scripts/theme.mjs deal` and `draw` to select a high-craft theme and macrostructure (e.g., Index-First, Dossier, or Workbench) that fits an executive & systems-builder portfolio.
-- [ ] **Step 3 & 4 — Token & Base CSS Scaffolding:**
+- [x] **Step 3 & 4 — Token & Base CSS Scaffolding:**
   - Run `node ~/.agents/skills/hallmark/scripts/theme.mjs scaffold <slug>` to generate `tokens.css` and `base.css`.
   - Ensure **100% of colors and fonts go through `:root` tokens** (Hallmark Floor rule #1).
   - Replace external render-blocking Google Fonts with self-hosted subsetted `.woff2` faces or a zero-latency modern font stack.
-- [ ] **Step 5 & 6 — Build Hero First, Then Sections:**
+- [x] **Step 5 & 6 — Build Hero First, Then Sections:**
   - Build the header/nav and hero first; run `node ~/.agents/skills/hallmark/scripts/sloplint.mjs index.html --render --stage hero`.
   - Build the remaining sections (About & Core Competencies, Enterprise Track Record, Production Systems & Architecture Index, Technical Writing, Direct Contact).
   - Clean up `script.js`: remove all `document.createElement('style')` injections, fake button loading timeouts, and scroll-jitter parallax; keep only clean, accessible mobile navigation (`aria-expanded`, Escape key close) and `prefers-reduced-motion`-safe interactions.
-- [ ] **Step 7 — Hallmark `sloplint --render` Sweep:**
+- [x] **Step 7 — Hallmark `sloplint --render` Sweep:**
   - Run `node ~/.agents/skills/hallmark/scripts/sloplint.mjs index.html styles.css --render` until **0 Floor FAILs** and all Reflex/Finish gates are resolved or explicitly documented in the CSS stamp header.
 
 ---
@@ -129,14 +129,14 @@ Split the work showcase into two clear, complementary lenses (or a unified archi
 
 After Hallmark's `sloplint` passes, run a targeted pass with the newly installed specialist skills:
 
-- [ ] **Modern Web Platform Pass (`modern-web-guidance`):**
+- [x] **Modern Web Platform Pass (`modern-web-guidance`):**
   - Verify semantic HTML landmarks, responsive fluid typography (`clamp()`), `overflow-x: clip` on `html, body`, and zero layout shift (`width`/`height` attributes on images).
-- [ ] **Interaction & Optical Polish (`apple-design` + `emil-design-eng` + `web-design-guidelines`):**
+- [x] **Interaction & Optical Polish (`apple-design` + `emil-design-eng` + `web-design-guidelines`):**
   - Check optical alignment of buttons, nav items, and project rows; verify tabular numerals (`font-variant-numeric: tabular-nums`) on dates/metrics.
   - Ensure all interactive controls implement instant `:focus-visible` rings and subtle, hardware-accelerated `transform`/`opacity` states with `@media (prefers-reduced-motion: reduce)` fallbacks.
-- [ ] **Second-Opinion Critique (`impeccable`):**
+- [x] **Second-Opinion Critique (`impeccable`):**
   - Run an `impeccable` critique/polish pass against the rendered page to catch any remaining visual tension, spacing inconsistencies, or weak hierarchy while keeping Hallmark's token floor intact.
-- [ ] **Live Browser & Accessibility Audit (`a11y-debugging` + `debug-optimize-lcp`):**
+- [x] **Live Browser & Accessibility Audit (`a11y-debugging` + `debug-optimize-lcp`):**
   - Verify desktop (`1280×800`, `1920×1080`) and mobile (`375×812`) viewports.
   - Confirm WCAG AA/AAA color contrast, keyboard tab order, and sub-second LCP.
 
@@ -144,6 +144,6 @@ After Hallmark's `sloplint` passes, run a targeted pass with the newly installed
 
 ## Phase 5: Preview Deployment & Production Promotion
 
-- [ ] Commit the refreshed site to the `preview` branch and push (`./docs/workflow.sh save "UI & copy refresh (26refresh)"`).
-- [ ] Verify the live preview build and check all external links (`adamjinks.com/blog/*`, `github.com/adamjinks`, `github.com/EchoNin9/*`, `linkedin.com/in/adamjinks`, `mailto:adam@jinks.pro`).
-- [ ] Promote `preview` to `main` (`./docs/workflow.sh deploy`) and verify `https://jinks.pro`.
+- [x] Commit the refreshed site to the `preview` branch and push (`git push origin preview` -> auto-deploys to `https://jinks.pro/preview/`).
+- [x] Verify the live preview build and check all external links (`adamjinks.com/blog/*`, `github.com/adamjinks`, `github.com/EchoNin9/*`, `linkedin.com/in/adamjinks`, `mailto:adam@jinks.pro`).
+- [ ] Promote `preview` to `main` (`./docs/workflow.sh deploy` or merge `preview` into `main`) and verify `https://jinks.pro`.

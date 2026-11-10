@@ -1,0 +1,29 @@
+[
+ {
+  "mode": "redesign",
+  "depth": "full",
+  "scope": "page",
+  "shape": "Narrative Workflow",
+  "theme": "grid",
+  "axes": "light/grotesk-sans/cool",
+  "hero": "Banner",
+  "nav": "floating pill",
+  "footer": "mast",
+  "imagery": "photographs",
+  "photos": [],
+  "entry": "index.html",
+  "fingerprint": "narrative-workflow/banner/floating-pill/mast/photographs/full-palette",
+  "sections": [
+   "hero",
+   "about",
+   "projects",
+   "writing",
+   "connect",
+   "footer"
+  ],
+  "signature": "overprint display head across ultramarine field with 20+ years architecture figure",
+  "waived": [],
+  "prompt": "executive cloud architect and systems engineering portfolio",
+  "date": "2026-11-10"
+ }
+]

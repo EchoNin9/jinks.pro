@@ -56,3 +56,6 @@ out/
 # Temporary files
 tmp/
 temp/
+.hallmark/shots/
+.hallmark/before*
+.hallmark/compare.html
